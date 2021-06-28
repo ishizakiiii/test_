@@ -116,6 +116,7 @@ for line in f:
 ##-------------以下、過負荷状態をチェック---------------------------------------
     if Address not in Q_dict.keys():
         Q_dict[Address] = collections.deque()
+        Q_dict[Address].append(Ping)
     else:
         #現在のPingを追加
         Q_dict[Address].append(Ping)
